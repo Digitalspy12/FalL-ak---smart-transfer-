@@ -1,0 +1,179 @@
+{
+	"appTitle": "Fall ak Smart Transfer",
+	"send": "إرسال",
+	"receive": "استقبال",
+	"ok": "موافق",
+	"loading": "جاري التحميل...",
+	"browse": "تصفح",
+	"donate": "تبرع",
+	"sender": {
+		"title": "إرسال",
+		"subtitle": "شارك الملفات أو المجلدات عبر اتصالات مشفرة من نظير إلى نظير.",
+		"stoppingTransmission": "إيقاف الإرسال...",
+		"startSharing": "بدء المشاركة",
+		"startingShare": "بدء المشاركة...",
+		"stopSharing": "إيقاف المشاركة",
+		"shareThisTicket": "شارك هذه التذكرة:",
+		"sendThisTicket": "أرسل هذه التذكرة للشخص الذي يريد استقبال ملفك",
+		"keepAppOpen": "احتفظ بهذا التطبيق مفتوحاً بينما يقوم الآخرون بتنزيل ملفاتك",
+		"fileLabel": "الملف:",
+		"listeningForConnection": "في انتظار الاتصال",
+		"sharingInProgress": "المشاركة قيد التنفيذ",
+		"transferCompleted": "اكتملت عملية النقل",
+		"filesBeingTransmitted": "الملفات قيد الإرسال",
+		"preparingForTransport": "جارٍ التحضير للنقل...",
+		"pleaseWaitProcessing": "يرجى الانتظار بينما نقوم بمعالجة ملفاتك للمشاركة...",
+		"dropFilesHere": "أسقط الملفات أو المجلدات هنا",
+		"dragAndDrop": "السحب والإفلات",
+		"orBrowse": "أو تصفح لاختيار الملفات أو المجلدات",
+		"fileSelected": "تم اختيار الملف",
+		"folderSelected": "تم اختيار المجلد",
+		"itemSelected": "تم اختيار العنصر",
+		"browseFile": "تصفح الملف",
+		"browseFolder": "تصفح المجلد",
+		"copyToClipboard": "نسخ إلى الحافظة",
+		"broadcastMode": {
+			"index": "بث",
+			"on": {
+				"label": "أنت تبث",
+				"description": "يمكن لعدة أشخاص لديهم التذكرة تنزيل الملفات في الوقت نفسه في وضع البث."
+			},
+			"off": {
+				"label": "مشاركة خاصة",
+				"description": "فقط الشخص الذي تشارك معه التذكرة يمكنه تنزيل الملف."
+			}
+		},
+		"description": "الوصف (اختياري)"
+	},
+	"receiver": {
+		"title": "استقبال الملفات",
+		"subtitle": "قم بتنزيل الملفات من المرسل باستخدام اتصالات مشفرة من نظير إلى نظير عبر الإنترنت.",
+		"saveToFolder": "حفظ في المجلد:",
+		"noFolderSelected": "لم يتم اختيار مجلد",
+		"pasteTicket": "الصق التذكرة هنا:",
+		"ticketPlaceholder": "sendme تذكرة الاستقبال...",
+		"howToReceive": "كيفية استقبال الملفات",
+		"instruction1": "يجب أن يكون المرسل متصل بالإنترنت ويشارك ملفاً",
+		"instruction2": "احصل على تذكرة من المرسل",
+		"instruction3": "الصق التذكرة في منطقة النص",
+		"instruction4": "انقر على التنزيل لبدء الاستقبال",
+		"instruction5": "سيتم حفظ الملفات في المجلد المحدد",
+		"keepAppOpen": "احتفظ بهذا التطبيق مفتوحاً أثناء تنزيل الملفات",
+		"connectingToSender": "الاتصال بالمرسل",
+		"downloadingInProgress": "التنزيل قيد التنفيذ",
+		"downloadCompleted": "اكتمل التنزيل",
+		"stopReceiving": "إيقاف الاستقبال",
+		"download": "تنزيل"
+	},
+	"transfer": {
+		"progress": "تقدم النقل",
+		"speed": "السرعة",
+		"eta": "ETA",
+		"timeRemaining": "الوقت المتبقي",
+		"calculating": "جارٍ الحساب...",
+		"complete": "اكتمل النقل!",
+		"stopped": "تم إيقاف الإرسال",
+		"newTransfer": "نقل جديد",
+		"done": "تم",
+		"open": "فتح",
+		"wasStopped": "تم إيقاف النقل قبل اكتماله.",
+		"successMessage": "تم إكمال عملية النقل بنجاح.",
+		"file": "ملف",
+		"folder": "مجلد",
+		"fileName": "اسم الملف",
+		"fileSize": "حجم الملف",
+		"folderSize": "حجم المجلد",
+		"downloadPath": "مسار التنزيل",
+		"duration": "المدة",
+		"avgSpeed": "متوسط السرعة"
+	},
+	"errors": {
+		"sharingFailed": "فشل المشاركة",
+		"sharingFailedDesc": "فشل بدء المشاركة",
+		"stopSharingFailed": "فشل إيقاف المشاركة",
+		"stopSharingFailedDesc": "فشل إيقاف المشاركة",
+		"copyFailed": "فشل النسخ",
+		"copyFailedDesc": "فشل نسخ التذكرة",
+		"folderDialogFailed": "فشل مربع حوار المجلد",
+		"folderDialogFailedDesc": "فشل فتح مربع حوار المجلد",
+		"fileDialogFailed": "فشل مربع حوار الملف",
+		"fileDialogFailedDesc": "فشل فتح مربع حوار الملف",
+		"receiveFailed": "فشل الاستقبال",
+		"receiveFailedDesc": "فشل استقبال الملف",
+		"openFolderFailed": "فشل فتح المجلد",
+		"openFolderFailedDesc": "فشل فتح مجلد التنزيل"
+	},
+	"comingSoon": "قريبًا",
+	"undo": "تراجع",
+	"cancel": "إلغاء",
+	"confirm": "تأكيد",
+	"privacyPolicy": "سياسة الخصوصية",
+	"license": "الترخيص",
+	"notFound": {
+		"title": "الصفحة غير موجودة",
+		"subtitle": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+		"goBack": "رجوع",
+		"goHome": "الرئيسية"
+	},
+	"settings": {
+		"title": "الإعدادات",
+		"navItems": {
+			"appearance": "المظهر واللغة",
+			"general": "عام",
+			"network": "الشبكة",
+			"notification": "الإشعارات"
+		},
+		"theme": {
+			"description": "اختر المظهر المفضل لديك",
+			"title": "المظهر",
+			"light": "فاتح",
+			"dark": "داكن",
+			"auto": "النظام"
+		},
+		"language": {
+			"title": "اللغة",
+			"description": "اختر لغتك المفضلة",
+			"noResults": "لم يتم العثور على لغات"
+		},
+		"general": {
+			"title": "عام",
+			"autoCheckUpdates": {
+				"label": "التحقق من التحديثات تلقائيًا",
+				"description": "سيتم التحقق من التحديثات عند بدء التشغيل"
+			},
+			"systembar": {
+				"title": "منطقة الإعلام",
+				"minimizeToTray": {
+					"label": "تصغير إلى منطقة الإعلام",
+					"description": "عند الإغلاق، تصغير التطبيق بدلًا من الخروج"
+				},
+				"showProgressOnIcon": {
+					"label": "إظهار تقدم النقل على الأيقونة",
+					"description": "شريط تقدم فوق أيقونة التطبيق"
+				},
+				"runOnSystemStartup": {
+					"label": "التشغيل عند بدء النظام",
+					"description": "تشغيل التطبيق تلقائيًا عند بدء النظام"
+				},
+				"contextMenu": {
+					"label": "قائمة سياق مستكشف الملفات",
+					"description": "إضافة «إرسال باستخدام Fall ak Smart Transfer» إلى قائمة النقر بزر الماوس الأيمن في مستكشف Windows"
+				}
+			}
+		}
+	},
+	"updater": {
+		"newUpdateTitle": "تحديث جديد!",
+		"newVersionAvailable": "يتوفر الإصدار {{version}}.",
+		"newVersionAvailableInline": "يتوفر إصدار جديد — {{version}}",
+		"updateNow": "تحديث الآن",
+		"later": "لاحقًا",
+		"checkForUpdates": "التحقق من التحديثات",
+		"noUpdatesTitle": "لا توجد تحديثات",
+		"noUpdatesDescription": "أنت تستخدم أحدث إصدار بالفعل",
+		"checkFailed": "فشل التحقق",
+		"checkFailedDesc": "تعذر التحقق من التحديثات",
+		"installFailed": "فشل التثبيت",
+		"installFailedDesc": "تعذر تثبيت التحديث"
+	}
+}

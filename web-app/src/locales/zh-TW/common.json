@@ -1,0 +1,182 @@
+{
+	"appTitle": "Fall ak Smart Transfer",
+	"send": "傳送",
+	"receive": "接收",
+	"ok": "確定",
+	"loading": "載入中...",
+	"browse": "瀏覽",
+	"donate": "捐贈",
+	"sender": {
+		"title": "傳送",
+		"subtitle": "透過加密的點對點連線分享檔案或資料夾。",
+		"stoppingTransmission": "正在停止傳輸...",
+		"startSharing": "開始分享",
+		"startingShare": "正在啟動分享...",
+		"stopSharing": "停止分享",
+		"shareThisTicket": "分享此票券：",
+		"sendThisTicket": "將此票券傳送給想要接收您檔案的人",
+		"keepAppOpen": "在其他人下載您的檔案時請保持應用程式開啟",
+		"fileLabel": "檔案：",
+		"listeningForConnection": "等待連線中",
+		"sharingInProgress": "正在分享",
+		"transferCompleted": "傳輸完成",
+		"filesBeingTransmitted": "檔案正在傳輸中",
+		"preparingForTransport": "正在準備傳輸...",
+		"pleaseWaitProcessing": "請稍候，我們正在處理您要分享的檔案...",
+		"dropFilesHere": "將檔案或資料夾拖放到此處",
+		"dragAndDrop": "拖放",
+		"orBrowse": "或瀏覽以選擇檔案或資料夾",
+		"fileSelected": "已選擇檔案",
+		"folderSelected": "已選擇資料夾",
+		"itemSelected": "已選擇項目",
+		"browseFile": "瀏覽檔案",
+		"browseFolder": "瀏覽資料夾",
+		"copyToClipboard": "複製到剪貼簿",
+		"broadcastMode": {
+			"index": "廣播",
+			"on": {
+				"label": "您正在廣播",
+				"description": "持有票券的多人可在廣播模式下同時下載檔案。"
+			},
+			"off": {
+				"label": "私人分享",
+				"description": "只有您與之分享票券的人才能下載檔案。"
+			}
+		},
+		"description": "說明（選填）"
+	},
+	"receiver": {
+		"title": "接收檔案",
+		"subtitle": "透過加密的點對點連線從傳送者下載檔案。",
+		"saveToFolder": "儲存至資料夾：",
+		"noFolderSelected": "未選擇資料夾",
+		"pasteTicket": "在此處貼上票券：",
+		"ticketPlaceholder": "sendme 接收票券...",
+		"howToReceive": "如何接收檔案",
+		"instruction1": "傳送者必須在線上並正在分享檔案",
+		"instruction2": "從傳送者處取得票券",
+		"instruction3": "將票券貼到文字區域",
+		"instruction4": "點擊下載開始接收",
+		"instruction5": "檔案將儲存到您選擇的資料夾",
+		"keepAppOpen": "在下載檔案時請保持應用程式開啟",
+		"connectingToSender": "正在連線至傳送者",
+		"downloadingInProgress": "正在下載",
+		"downloadCompleted": "下載完成",
+		"downloadCompletedWithConflicts": "下載完成，已處理同名衝突",
+		"downloadedFile": "已下載檔案",
+		"stopReceiving": "停止接收",
+		"download": "下載"
+	},
+	"transfer": {
+		"progress": "傳輸進度",
+		"speed": "速度",
+		"eta": "ETA",
+		"timeRemaining": "剩餘時間",
+		"calculating": "計算中...",
+		"complete": "傳輸完成！",
+		"stopped": "傳輸已停止",
+		"newTransfer": "新傳輸",
+		"done": "完成",
+		"open": "打開",
+		"wasStopped": "傳輸在完成前已停止。",
+		"successMessage": "您的傳輸已成功完成。",
+		"file": "檔案",
+		"folder": "資料夾",
+		"fileName": "檔案名稱",
+		"fileSize": "檔案大小",
+		"folderSize": "資料夾大小",
+		"downloadPath": "下載路徑",
+		"duration": "持續時間",
+		"avgSpeed": "平均速度",
+		"multipleFiles": "{{count}} 個檔案"
+	},
+	"errors": {
+		"sharingFailed": "分享失敗",
+		"sharingFailedDesc": "無法開始分享",
+		"stopSharingFailed": "停止分享失敗",
+		"stopSharingFailedDesc": "無法停止分享",
+		"copyFailed": "複製失敗",
+		"copyFailedDesc": "無法複製票券",
+		"folderDialogFailed": "資料夾對話框失敗",
+		"folderDialogFailedDesc": "無法開啟資料夾對話框",
+		"fileDialogFailed": "檔案對話框失敗",
+		"fileDialogFailedDesc": "無法開啟檔案對話框",
+		"receiveFailed": "接收失敗",
+		"receiveFailedDesc": "無法接收檔案",
+		"openFolderFailed": "開啟資料夾失敗",
+		"openFolderFailedDesc": "無法開啟下載資料夾"
+	},
+	"comingSoon": "即將推出",
+	"undo": "復原",
+	"cancel": "取消",
+	"confirm": "確認",
+	"privacyPolicy": "隱私權政策",
+	"license": "授權條款",
+	"notFound": {
+		"title": "找不到頁面",
+		"subtitle": "您要找的頁面不存在或已移動。",
+		"goBack": "返回",
+		"goHome": "返回首頁"
+	},
+	"settings": {
+		"title": "設定",
+		"navItems": {
+			"appearance": "主題與語言",
+			"general": "一般",
+			"network": "網路",
+			"notification": "通知"
+		},
+		"theme": {
+			"description": "選擇您偏好的主題",
+			"title": "外觀",
+			"light": "淺色",
+			"dark": "深色",
+			"auto": "跟隨系統"
+		},
+		"language": {
+			"title": "語言",
+			"description": "選擇您偏好的語言",
+			"noResults": "找不到語言"
+		},
+		"general": {
+			"title": "一般",
+			"autoCheckUpdates": {
+				"label": "自動檢查更新",
+				"description": "應用程式啟動時會自動檢查更新"
+			},
+			"systembar": {
+				"title": "系統匣",
+				"minimizeToTray": {
+					"label": "最小化到系統匣",
+					"description": "關閉時最小化應用程式而非結束"
+				},
+				"showProgressOnIcon": {
+					"label": "在應用程式圖示上顯示傳輸進度",
+					"description": "在應用程式圖示上顯示進度列以表示傳輸進度"
+				},
+				"runOnSystemStartup": {
+					"label": "開機時啟動",
+					"description": "系統啟動時自動執行應用程式"
+				},
+				"contextMenu": {
+					"label": "檔案總管右鍵選單",
+					"description": "在 Windows 檔案總管右鍵選單中新增「使用 Fall ak Smart Transfer 傳送」"
+				}
+			}
+		}
+	},
+	"updater": {
+		"newUpdateTitle": "有新更新！",
+		"newVersionAvailable": "已有新版本 {{version}}。",
+		"newVersionAvailableInline": "有新版本可用 — {{version}}",
+		"updateNow": "立即更新",
+		"later": "稍後",
+		"checkForUpdates": "檢查更新",
+		"noUpdatesTitle": "沒有可用更新",
+		"noUpdatesDescription": "您已使用最新版本",
+		"checkFailed": "檢查失敗",
+		"checkFailedDesc": "無法檢查更新",
+		"installFailed": "安裝失敗",
+		"installFailedDesc": "無法安裝更新"
+	}
+}

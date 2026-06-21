@@ -1,0 +1,179 @@
+{
+	"appTitle": "Fall ak Smart Transfer",
+	"send": "Gönder",
+	"receive": "Al",
+	"ok": "TAMAM",
+	"loading": "Yükleniyor...",
+	"browse": "Gözat",
+	"donate": "Bağış Yap",
+	"sender": {
+		"title": "Gönder",
+		"subtitle": "Dosyaları veya klasörleri şifreli eşler arası (P2P) bağlantılarla paylaşın.",
+		"stoppingTransmission": "İletim durduruluyor...",
+		"startSharing": "Paylaşımı Başlat",
+		"startingShare": "Paylaşım Başlatılıyor...",
+		"stopSharing": "Paylaşımı Durdur",
+		"shareThisTicket": "Bu anahtarı paylaş:",
+		"sendThisTicket": "Bu anahtarı dosyanızı alacak kişiye gönderin",
+		"keepAppOpen": "Başkaları dosyalarınızı indirirken bu uygulamayı açık tutun",
+		"fileLabel": "Dosya:",
+		"listeningForConnection": "Bağlantı bekleniyor",
+		"sharingInProgress": "Paylaşım sürüyor",
+		"transferCompleted": "Transfer tamamlandı",
+		"filesBeingTransmitted": "Dosyalar iletiliyor",
+		"preparingForTransport": "Transfer için hazırlanıyor...",
+		"pleaseWaitProcessing": "Dosyalarınız paylaşım için işlenirken lütfen bekleyin...",
+		"dropFilesHere": "Dosyaları veya klasörleri buraya sürükleyin",
+		"dragAndDrop": "Sürükle & Bırak",
+		"orBrowse": "veya dosya/klasör seçmek için göz atın",
+		"fileSelected": "Dosya seçildi",
+		"folderSelected": "Klasör seçildi",
+		"itemSelected": "Öğe seçildi",
+		"browseFile": "Dosyaya Gözat",
+		"browseFolder": "Klasöre Gözat",
+		"copyToClipboard": "Panoya kopyala",
+		"broadcastMode": {
+			"index": "Yayın",
+			"on": {
+				"label": "Yayın yapıyorsunuz",
+				"description": "Anahtara sahip birden fazla kişi yayın modunda dosyaları aynı anda indirebilir."
+			},
+			"off": {
+				"label": "Özel paylaşım",
+				"description": "Yalnızca anahtarı paylaştığınız kişi dosyayı indirebilir."
+			}
+		},
+		"description": "Açıklama (isteğe bağlı)"
+	},
+	"receiver": {
+		"title": "Dosya Al",
+		"subtitle": "İnternet üzerinden şifreli eşler arası bağlantılarla göndericiden dosya indirin.",
+		"saveToFolder": "Klasöre kaydet:",
+		"noFolderSelected": "Klasör seçilmedi",
+		"pasteTicket": "Anahtarı buraya yapıştırın:",
+		"ticketPlaceholder": "sendme alma anahtarı...",
+		"howToReceive": "Dosya nasıl alınır",
+		"instruction1": "Gönderici çevrimiçi olmalı ve dosya paylaşıyor olmalı",
+		"instruction2": "Göndericiden bir anahtar alın",
+		"instruction3": "Anahtarı metin alanına yapıştırın",
+		"instruction4": "Almaya başlamak için İndir butonuna tıklayın",
+		"instruction5": "Dosyalar seçtiğiniz klasöre kaydedilecek",
+		"keepAppOpen": "Dosya indirilirken uygulamayı açık tutun",
+		"connectingToSender": "Göndericiye bağlanılıyor",
+		"downloadingInProgress": "İndirme işlemi sürüyor",
+		"downloadCompleted": "İndirme tamamlandı",
+		"stopReceiving": "Alımı durdur",
+		"download": "İndir"
+	},
+	"transfer": {
+		"progress": "Transfer Süreci",
+		"speed": "Hız",
+		"eta": "ETA",
+		"timeRemaining": "Kalan Süre",
+		"calculating": "Hesaplanıyor...",
+		"complete": "Transfer Tamamlandı!",
+		"stopped": "İletim Durduruldu",
+		"newTransfer": "Yeni Transfer",
+		"done": "Tamam",
+		"open": "Aç",
+		"wasStopped": "Transfer tamamlanmadan durduruldu.",
+		"successMessage": "Transferiniz başarıyla tamamlandı.",
+		"file": "Dosya",
+		"folder": "Klasör",
+		"fileName": "Dosya adı",
+		"fileSize": "Dosya boyutu",
+		"folderSize": "Klasör boyutu",
+		"downloadPath": "İndirme yolu",
+		"duration": "Süre",
+		"avgSpeed": "Ort. Hız"
+	},
+	"errors": {
+		"sharingFailed": "Paylaşım Başarısız",
+		"sharingFailedDesc": "Paylaşım başlatılamadı",
+		"stopSharingFailed": "Paylaşımı Durdurma Başarısız",
+		"stopSharingFailedDesc": "Paylaşım durdurulamadı",
+		"copyFailed": "Kopyalama Başarısız",
+		"copyFailedDesc": "Anahtar kopyalanamadı",
+		"folderDialogFailed": "Klasör Penceresi Başarısız",
+		"folderDialogFailedDesc": "Klasör penceresi açılamadı",
+		"fileDialogFailed": "Dosya Penceresi Başarısız",
+		"fileDialogFailedDesc": "Dosya penceresi açılamadı",
+		"receiveFailed": "Alma Başarısız",
+		"receiveFailedDesc": "Dosya alınamadı",
+		"openFolderFailed": "Klasörü Açma Başarısız",
+		"openFolderFailedDesc": "İndirme klasörü açılamadı"
+	},
+	"comingSoon": "Çok yakında",
+	"undo": "Geri al",
+	"cancel": "İptal",
+	"confirm": "Onayla",
+	"privacyPolicy": "Gizlilik politikası",
+	"license": "Lisans",
+	"notFound": {
+		"title": "Sayfa bulunamadı",
+		"subtitle": "Aradığınız sayfa mevcut değil veya taşınmış.",
+		"goBack": "Geri",
+		"goHome": "Ana sayfa"
+	},
+	"settings": {
+		"title": "Ayarlar",
+		"navItems": {
+			"appearance": "Tema ve dil",
+			"general": "Genel",
+			"network": "Ağ",
+			"notification": "Bildirimler"
+		},
+		"theme": {
+			"description": "Tercih ettiğiniz temayı seçin",
+			"title": "Görünüm",
+			"light": "Açık",
+			"dark": "Koyu",
+			"auto": "Sistem"
+		},
+		"language": {
+			"title": "Dil",
+			"description": "Tercih ettiğiniz dili seçin",
+			"noResults": "Dil bulunamadı"
+		},
+		"general": {
+			"title": "Genel",
+			"autoCheckUpdates": {
+				"label": "Güncellemeleri otomatik denetle",
+				"description": "Uygulama başlarken güncellemeleri denetler"
+			},
+			"systembar": {
+				"title": "Sistem tepsisi",
+				"minimizeToTray": {
+					"label": "Sistem tepsisine küçült",
+					"description": "Kapatırken uygulamayı sonlandırmak yerine küçült"
+				},
+				"showProgressOnIcon": {
+					"label": "Simge üzerinde aktarım ilerlemesini göster",
+					"description": "İlerleme çubuğu uygulama simgesinde"
+				},
+				"runOnSystemStartup": {
+					"label": "Sistem başlangıcında çalıştır",
+					"description": "Sistem açıldığında uygulamayı otomatik başlat"
+				},
+				"contextMenu": {
+					"label": "Gezgin bağlam menüsü",
+					"description": "Windows Gezgini sağ tık menüsüne «Fall ak Smart Transfer ile gönder» ekle"
+				}
+			}
+		}
+	},
+	"updater": {
+		"newUpdateTitle": "Yeni güncelleme!",
+		"newVersionAvailable": "{{version}} sürümü kullanılabilir.",
+		"newVersionAvailableInline": "Yeni sürüm mevcut — {{version}}",
+		"updateNow": "Şimdi güncelle",
+		"later": "Sonra",
+		"checkForUpdates": "Güncellemeleri denetle",
+		"noUpdatesTitle": "Güncelleme yok",
+		"noUpdatesDescription": "Zaten en son sürümü kullanıyorsunuz",
+		"checkFailed": "Denetleme başarısız",
+		"checkFailedDesc": "Güncellemeler denetlenemedi",
+		"installFailed": "Kurulum başarısız",
+		"installFailedDesc": "Güncelleme kurulamadı"
+	}
+}

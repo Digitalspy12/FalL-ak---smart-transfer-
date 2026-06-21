@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schema.tauri.app/config/2",
+	"identifier": "com.fallak.smarttransfer.android",
+	"app": {
+		"macOSPrivateApi": false,
+		"windows": [
+			{
+				"label": "main",
+				"title": "Fall ak Smart Transfer"
+			}
+		]
+	},
+	"plugins": {
+		"updater": null
+	},
+	"bundle": {
+		"createUpdaterArtifacts": false,
+		"android": {
+			"minSdkVersion": 24
+		}
+	}
+}

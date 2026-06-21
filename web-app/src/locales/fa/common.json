@@ -1,0 +1,179 @@
+{
+	"appTitle": "Fall ak Smart Transfer",
+	"send": "ارسال",
+	"receive": "دریافت",
+	"ok": "باشه",
+	"loading": "در حال بارگذاری...",
+	"browse": "انتخاب",
+	"donate": "حمایت",
+	"sender": {
+		"title": "ارسال فایل",
+		"subtitle": "اشتراک‌گذاری فایل و فولدر با اتصال رمزنگاری‌شده‌ی همتا به همتا.",
+		"stoppingTransmission": "در حال متوقف کردن ارسال...",
+		"startSharing": "شروع اشتراک‌گذاری",
+		"startingShare": "در حال شروع...",
+		"stopSharing": "توقف اشتراک‌گذاری",
+		"shareThisTicket": "این تیکت رو به اشتراک بگذارید:",
+		"sendThisTicket": "این تیکت رو برای کسی که میخواد فایل رو بگیره بفرستید",
+		"keepAppOpen": "تا پایان ارسال برنامه رو باز نگه دار",
+		"fileLabel": "فایل:",
+		"listeningForConnection": "در انتظار اتصال...",
+		"sharingInProgress": "در حال اشتراک‌گذاری",
+		"transferCompleted": "ارسال کامل شد",
+		"filesBeingTransmitted": "در حال ارسال فایل‌ها...",
+		"preparingForTransport": "در حال آماده‌سازی...",
+		"pleaseWaitProcessing": "لطفا صبر کنید، در حال آماده‌سازی فایل‌ها...",
+		"dropFilesHere": "فایل‌ها یا فولدرها رو اینجا بندازید",
+		"dragAndDrop": "بکشید و رها کنید",
+		"orBrowse": "یا انتخاب کنید",
+		"fileSelected": "فایل انتخاب شد",
+		"folderSelected": "فولدر انتخاب شد",
+		"itemSelected": "آیتم انتخاب شد",
+		"browseFile": "انتخاب فایل",
+		"browseFolder": "انتخاب فولدر",
+		"copyToClipboard": "کپی در کلیپ‌بورد",
+		"broadcastMode": {
+			"index": "پخش",
+			"on": {
+				"label": "شما در حال پخش هستید",
+				"description": "چند نفر که بلیت را دارند می‌توانند در حالت پخش هم‌زمان فایل‌ها را دانلود کنند."
+			},
+			"off": {
+				"label": "اشتراک‌گذاری خصوصی",
+				"description": "فقط کسی که تیکت را با او به اشتراک گذاشته‌اید می‌تواند فایل را دانلود کند."
+			}
+		},
+		"description": "توضیحات (اختیاری)"
+	},
+	"receiver": {
+		"title": "دریافت فایل",
+		"subtitle": "دریافت فایل از فرستنده با اتصال رمزنگاری‌شده‌ی همتا به همتا.",
+		"saveToFolder": "ذخیره در این مسیر:",
+		"noFolderSelected": "فولدر انتخاب نشده",
+		"pasteTicket": "تیکت رو اینجا وارد کنید:",
+		"ticketPlaceholder": "تیکت را وارد کنید...",
+		"howToReceive": "راهنمای دریافت",
+		"instruction1": "فرستنده باید آنلاین و در حال اشتراک‌گذاری باشه",
+		"instruction2": "تیکت رو از فرستنده بگیرید",
+		"instruction3": "تیکت رو اینجا وارد کنید",
+		"instruction4": "روی «دانلود» بزنید",
+		"instruction5": "فایل‌ها داخل فولدر انتخاب‌شده ذخیره میشن",
+		"keepAppOpen": "تا پایان دریافت برنامه رو باز نگه دار",
+		"connectingToSender": "در حال اتصال...",
+		"downloadingInProgress": "در حال دانلود...",
+		"downloadCompleted": "دانلود کامل شد",
+		"stopReceiving": "توقف دریافت",
+		"download": "دانلود"
+	},
+	"transfer": {
+		"progress": "پیشرفت انتقال",
+		"speed": "سرعت",
+		"eta": "ETA",
+		"timeRemaining": "زمان باقی‌مانده",
+		"calculating": "در حال محاسبه...",
+		"complete": "انتقال کامل شد!",
+		"stopped": "انتقال متوقف شد",
+		"newTransfer": "انتقال جدید",
+		"done": "انجام شد",
+		"open": "باز کردن",
+		"wasStopped": "انتقال قبل از اتمام متوقف شد.",
+		"successMessage": "فایل با موفقیت منتقل شد.",
+		"file": "فایل",
+		"folder": "فولدر",
+		"fileName": "نام فایل",
+		"fileSize": "حجم فایل",
+		"folderSize": "حجم فولدر",
+		"downloadPath": "مسیر ذخیره",
+		"duration": "مدت زمان",
+		"avgSpeed": "میانگین سرعت"
+	},
+	"errors": {
+		"sharingFailed": "خطا در اشتراک‌گذاری",
+		"sharingFailedDesc": "شروع اشتراک‌گذاری با مشکل روبه‌رو شد",
+		"stopSharingFailed": "خطا در توقف اشتراک‌گذاری",
+		"stopSharingFailedDesc": "توقف اشتراک‌گذاری انجام نشد",
+		"copyFailed": "کپی انجام نشد",
+		"copyFailedDesc": "کپی کردن تیکت با مشکل روبه‌رو شد",
+		"folderDialogFailed": "خطا در انتخاب فولدر",
+		"folderDialogFailedDesc": "باز کردن پنجره انتخاب فولدر ناموفق بود",
+		"fileDialogFailed": "خطا در انتخاب فایل",
+		"fileDialogFailedDesc": "باز کردن پنجره انتخاب فایل ناموفق بود",
+		"receiveFailed": "خطا در دریافت",
+		"receiveFailedDesc": "دریافت فایل با مشکل روبه‌رو شد",
+		"openFolderFailed": "خطا در باز کردن فولدر",
+		"openFolderFailedDesc": "باز کردن فولدر دانلود ناموفق بود"
+	},
+	"comingSoon": "به‌زودی",
+	"undo": "واگرد",
+	"cancel": "لغو",
+	"confirm": "تأیید",
+	"privacyPolicy": "حریم خصوصی",
+	"license": "مجوز",
+	"notFound": {
+		"title": "صفحه یافت نشد",
+		"subtitle": "صفحه‌ای که به‌دنبال آن هستید وجود ندارد یا جابه‌جا شده است.",
+		"goBack": "بازگشت",
+		"goHome": "خانه"
+	},
+	"settings": {
+		"title": "تنظیمات",
+		"navItems": {
+			"appearance": "تم و زبان",
+			"general": "عمومی",
+			"network": "شبکه",
+			"notification": "اعلان‌ها"
+		},
+		"theme": {
+			"description": "تم دلخواه خود را انتخاب کنید",
+			"title": "ظاهر",
+			"light": "روشن",
+			"dark": "تیره",
+			"auto": "سیستم"
+		},
+		"language": {
+			"title": "زبان",
+			"description": "زبان مورد نظر خود را انتخاب کنید",
+			"noResults": "زبانی یافت نشد"
+		},
+		"general": {
+			"title": "عمومی",
+			"autoCheckUpdates": {
+				"label": "بررسی خودکار به‌روزرسانی",
+				"description": "برنامه هنگام راه‌اندازی به‌روزرسانی‌ها را بررسی می‌کند"
+			},
+			"systembar": {
+				"title": "سینی سیستم",
+				"minimizeToTray": {
+					"label": "کمینه‌سازی به سینی سیستم",
+					"description": "هنگام بستن، برنامه کمینه شود نه خروج"
+				},
+				"showProgressOnIcon": {
+					"label": "نمایش پیشرفت انتقال روی آیکن",
+					"description": "نوار پیشرفت روی آیکن برنامه"
+				},
+				"runOnSystemStartup": {
+					"label": "اجرای هنگام راه‌اندازی سیستم",
+					"description": "اجرای خودکار برنامه با روشن شدن سیستم"
+				},
+				"contextMenu": {
+					"label": "منوی راست‌کلیک اکسپلورر",
+					"description": "افزودن «ارسال با Fall ak Smart Transfer» به منوی راست‌کلیک اکسپلورر ویندوز"
+				}
+			}
+		}
+	},
+	"updater": {
+		"newUpdateTitle": "به‌روزرسانی جدید!",
+		"newVersionAvailable": "نسخه {{version}} در دسترس است.",
+		"newVersionAvailableInline": "نسخه جدید در دسترس است — {{version}}",
+		"updateNow": "اکنون به‌روزرسانی کنید",
+		"later": "بعداً",
+		"checkForUpdates": "بررسی به‌روزرسانی",
+		"noUpdatesTitle": "به‌روزرسانی موجود نیست",
+		"noUpdatesDescription": "شما از جدیدترین نسخه استفاده می‌کنید",
+		"checkFailed": "بررسی ناموفق بود",
+		"checkFailedDesc": "بررسی به‌روزرسانی انجام نشد",
+		"installFailed": "نصب ناموفق بود",
+		"installFailedDesc": "نصب به‌روزرسانی انجام نشد"
+	}
+}

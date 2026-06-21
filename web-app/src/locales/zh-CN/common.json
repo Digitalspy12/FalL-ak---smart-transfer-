@@ -1,0 +1,186 @@
+{
+	"appTitle": "Fall ak Smart Transfer",
+	"send": "发送",
+	"receive": "接收",
+	"ok": "确定",
+	"loading": "加载中...",
+	"browse": "浏览",
+	"donate": "捐赠",
+	"sender": {
+		"title": "发送",
+		"subtitle": "通过加密的点对点连接共享文件或文件夹。",
+		"stoppingTransmission": "正在停止传输...",
+		"startSharing": "开始共享",
+		"startingShare": "正在启动共享...",
+		"stopSharing": "停止共享",
+		"shareThisTicket": "分享此票据：",
+		"sendThisTicket": "将此票据发送给想要接收您文件的人",
+		"keepAppOpen": "在其他人下载您的文件时请保持应用打开",
+		"fileLabel": "文件：",
+		"listeningForConnection": "等待连接中",
+		"sharingInProgress": "正在共享",
+		"transferCompleted": "传输完成",
+		"filesBeingTransmitted": "文件正在传输中",
+		"preparingForTransport": "正在准备传输...",
+		"pleaseWaitProcessing": "请稍候，我们正在处理您要共享的文件...",
+		"dropFilesHere": "将文件或文件夹拖放到此处",
+		"dragAndDrop": "拖放",
+		"orBrowse": "或浏览以选择文件或文件夹",
+		"fileSelected": "已选择文件",
+		"folderSelected": "已选择文件夹",
+		"itemSelected": "已选择项目",
+		"browseFile": "浏览文件",
+		"browseFolder": "浏览文件夹",
+		"copyToClipboard": "复制到剪贴板",
+		"description": "描述（可选）",
+		"broadcastMode": {
+			"index": "广播",
+			"on": {
+				"label": "您正在广播",
+				"description": "持有票据的多人可以在广播模式下同时下载文件。"
+			},
+			"off": {
+				"label": "私人共享",
+				"description": "只有您与之共享票据的人才能下载文件。"
+			}
+		}
+	},
+	"receiver": {
+		"title": "接收文件",
+		"subtitle": "通过加密的点对点连接从发送者下载文件。",
+		"saveToFolder": "保存到文件夹：",
+		"noFolderSelected": "未选择文件夹",
+		"pasteTicket": "在此处粘贴票据：",
+		"ticketPlaceholder": "sendme 接收票据...",
+		"howToReceive": "如何接收文件",
+		"instruction1": "发送者必须在线并正在共享文件",
+		"instruction2": "从发送者处获取票据",
+		"instruction3": "将票据粘贴到文本区域",
+		"instruction4": "点击下载开始接收",
+		"instruction5": "文件将保存到您选择的文件夹",
+		"keepAppOpen": "在下载文件时请保持应用打开",
+		"connectingToSender": "正在连接到发送者",
+		"previewMultipleItems": "{{name}} ... 等{{count}}个项目",
+		"multipleFilesFound": "找到多个文件",
+		"expandPreviewList": "显示文件列表",
+		"collapsePreviewList": "隐藏文件列表",
+		"downloadingInProgress": "正在下载",
+		"downloadCompleted": "下载完成",
+		"downloadCompletedWithConflicts": "下载完成，已处理重名冲突",
+		"downloadedFile": "已下载文件",
+		"stopReceiving": "停止接收",
+		"download": "下载"
+	},
+	"transfer": {
+		"progress": "传输进度",
+		"speed": "速度",
+		"eta": "ETA",
+		"timeRemaining": "剩余时间",
+		"calculating": "计算中...",
+		"complete": "传输完成！",
+		"stopped": "传输已停止",
+		"newTransfer": "新传输",
+		"done": "完成",
+		"open": "打开",
+		"wasStopped": "传输在完成前已停止。",
+		"successMessage": "您的传输已成功完成。",
+		"file": "文件",
+		"folder": "文件夹",
+		"fileName": "文件名",
+		"fileSize": "文件大小",
+		"folderSize": "文件夹大小",
+		"downloadPath": "下载路径",
+		"duration": "持续时间",
+		"avgSpeed": "平均速度",
+		"multipleFiles": "{{count}} 个文件"
+	},
+	"errors": {
+		"sharingFailed": "共享失败",
+		"sharingFailedDesc": "无法开始共享",
+		"stopSharingFailed": "停止共享失败",
+		"stopSharingFailedDesc": "无法停止共享",
+		"copyFailed": "复制失败",
+		"copyFailedDesc": "无法复制票据",
+		"folderDialogFailed": "文件夹对话框失败",
+		"folderDialogFailedDesc": "无法打开文件夹对话框",
+		"fileDialogFailed": "文件对话框失败",
+		"fileDialogFailedDesc": "无法打开文件对话框",
+		"receiveFailed": "接收失败",
+		"receiveFailedDesc": "无法接收文件",
+		"openFolderFailed": "打开文件夹失败",
+		"openFolderFailedDesc": "无法打开下载文件夹"
+	},
+	"comingSoon": "即将推出",
+	"undo": "撤销",
+	"cancel": "取消",
+	"confirm": "确认",
+	"privacyPolicy": "隐私政策",
+	"license": "许可协议",
+	"notFound": {
+		"title": "页面未找到",
+		"subtitle": "您访问的页面不存在或已被移动。",
+		"goBack": "返回",
+		"goHome": "返回首页"
+	},
+	"settings": {
+		"title": "设置",
+		"navItems": {
+			"appearance": "主题与语言",
+			"general": "通用",
+			"network": "网络",
+			"notification": "通知"
+		},
+		"theme": {
+			"description": "选择您喜欢的主题",
+			"title": "外观",
+			"light": "浅色",
+			"dark": "深色",
+			"auto": "跟随系统"
+		},
+		"language": {
+			"title": "语言",
+			"description": "选择您偏好的语言",
+			"noResults": "未找到语言"
+		},
+		"general": {
+			"title": "通用",
+			"autoCheckUpdates": {
+				"label": "自动检查更新",
+				"description": "应用启动时将自动检查更新"
+			},
+			"systembar": {
+				"title": "系统托盘",
+				"minimizeToTray": {
+					"label": "最小化到系统托盘",
+					"description": "关闭时最小化应用而非退出"
+				},
+				"showProgressOnIcon": {
+					"label": "在应用图标上显示传输进度",
+					"description": "在应用图标上叠加进度条以显示传输进度"
+				},
+				"runOnSystemStartup": {
+					"label": "开机时启动",
+					"description": "系统启动时自动运行本应用"
+				},
+				"contextMenu": {
+					"label": "资源管理器右键菜单",
+					"description": "在 Windows 资源管理器右键菜单中添加「使用 Fall ak Smart Transfer 发送」"
+				}
+			}
+		}
+	},
+	"updater": {
+		"newUpdateTitle": "有新更新！",
+		"newVersionAvailable": "新版本 {{version}} 可用。",
+		"newVersionAvailableInline": "有新版本可用 — {{version}}",
+		"updateNow": "立即更新",
+		"later": "稍后",
+		"checkForUpdates": "检查更新",
+		"noUpdatesTitle": "暂无更新",
+		"noUpdatesDescription": "您已在使用最新版本",
+		"checkFailed": "检查失败",
+		"checkFailedDesc": "无法检查更新",
+		"installFailed": "安装失败",
+		"installFailedDesc": "无法安装更新"
+	}
+}

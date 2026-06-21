@@ -1,0 +1,84 @@
+use sendme::SendResult;
+use std::path::PathBuf;
+use std::sync::Arc;
+use tokio::sync::Mutex;
+
+/// Application state for managing sharing sessions
+#[derive(Default)]
+pub struct AppState {
+    pub current_share: Option<ShareHandle>,
+    pub is_share_starting: bool, // True while start_sharing is preparing metadata/session
+    pub is_transporting: bool,   // True when actual data transfer is happening
+    pub launch_intent: Option<String>, // Path to file/folder passed via CLI (e.g. context menu)
+}
+
+/// Handle for an active sharing session
+/// CRITICAL: This struct holds the router and temp_tag which keeps the server alive
+pub struct ShareHandle {
+    pub ticket: String,
+    pub _path: PathBuf,          // Keep path for potential future use
+    pub send_result: SendResult, // This keeps router and temp_tag alive!
+}
+
+impl Drop for ShareHandle {
+    fn drop(&mut self) {
+        // Clean up the temporary blobs directory when share is stopped
+        // Use blocking cleanup since Drop is synchronous
+        // Spawn a thread to avoid blocking the async runtime
+        let blobs_dir = self.send_result.blobs_data_dir.clone();
+        std::thread::spawn(move || {
+            // Use blocking std::fs instead of tokio::fs for cleanup in Drop
+            match std::fs::remove_dir_all(&blobs_dir) {
+                Ok(_) => {}
+                Err(e) => {
+                    tracing::warn!(
+                        "Failed to clean up blobs directory {}: {}",
+                        blobs_dir.display(),
+                        e
+                    );
+                }
+            }
+        });
+    }
+}
+
+impl ShareHandle {
+    pub fn new(ticket: String, path: PathBuf, send_result: SendResult) -> Self {
+        Self {
+            ticket,
+            _path: path,
+            send_result,
+        }
+    }
+
+    /// Explicitly stop the sharing session and clean up resources
+    /// The actual cleanup will happen in Drop when the struct is destroyed
+    pub async fn stop(&mut self) -> Result<(), String> {
+        use std::time::Duration;
+
+        // Gracefully shutdown the router with timeout (same as CLI implementation)
+        match tokio::time::timeout(Duration::from_secs(2), self.send_result.router.shutdown()).await
+        {
+            Ok(Ok(())) => {}
+            Ok(Err(e)) => {
+                tracing::warn!("Router shutdown error: {}", e);
+            }
+            Err(_) => {
+                tracing::warn!("Router shutdown timeout after 2 seconds");
+            }
+        }
+
+        // Explicitly close the endpoint to avoid "Endpoint dropped without calling close" error
+        // This ensures graceful cleanup of the iroh endpoint resources
+        let endpoint = self.send_result.router.endpoint();
+        endpoint.close().await;
+
+        // temp_tag, _store, and _progress_handle will be dropped automatically when the method ends
+        // Cleanup of blobs directory will happen in Drop trait
+
+        Ok(())
+    }
+}
+
+/// Thread-safe wrapper for AppState
+pub type AppStateMutex = Arc<Mutex<AppState>>;
