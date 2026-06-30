@@ -51,7 +51,7 @@
 		"saveToFolder": "保存到文件夹：",
 		"noFolderSelected": "未选择文件夹",
 		"pasteTicket": "在此处粘贴票据：",
-		"ticketPlaceholder": "sendme 接收票据...",
+		"ticketPlaceholder": "smartTransfer 接收票据...",
 		"howToReceive": "如何接收文件",
 		"instruction1": "发送者必须在线并正在共享文件",
 		"instruction2": "从发送者处获取票据",

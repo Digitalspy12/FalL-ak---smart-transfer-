@@ -51,7 +51,7 @@
 		"saveToFolder": "Зберегти в папку:",
 		"noFolderSelected": "Папка не вибрана",
 		"pasteTicket": "Вставте сюди тікет:",
-		"ticketPlaceholder": "sendme тікет отримання...",
+		"ticketPlaceholder": "smartTransfer тікет отримання...",
 		"howToReceive": "Як отримувати файли",
 		"instruction1": "Відправник повинен бути в мережі і повинен поділитися файлом",
 		"instruction2": "Отримайте тікет від відправника",

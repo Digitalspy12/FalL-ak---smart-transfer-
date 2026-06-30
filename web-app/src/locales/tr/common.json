@@ -51,7 +51,7 @@
 		"saveToFolder": "Klasöre kaydet:",
 		"noFolderSelected": "Klasör seçilmedi",
 		"pasteTicket": "Anahtarı buraya yapıştırın:",
-		"ticketPlaceholder": "sendme alma anahtarı...",
+		"ticketPlaceholder": "smartTransfer alma anahtarı...",
 		"howToReceive": "Dosya nasıl alınır",
 		"instruction1": "Gönderici çevrimiçi olmalı ve dosya paylaşıyor olmalı",
 		"instruction2": "Göndericiden bir anahtar alın",

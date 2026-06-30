@@ -51,7 +51,7 @@
 		"saveToFolder": "Guardar en la carpeta:",
 		"noFolderSelected": "Ninguna carpeta seleccionada",
 		"pasteTicket": "Pega aquí el ticket:",
-		"ticketPlaceholder": "sendme ticket de recepción...",
+		"ticketPlaceholder": "smartTransfer ticket de recepción...",
 		"howToReceive": "Cómo recibir archivos",
 		"instruction1": "El remitente debe estar online y compartiendo un archivo",
 		"instruction2": "Obtén un ticket del remitente",

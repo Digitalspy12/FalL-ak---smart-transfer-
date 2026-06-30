@@ -51,7 +51,7 @@
 		"saveToFolder": "Enregistrer dans le dossier :",
 		"noFolderSelected": "Aucun dossier sélectionné",
 		"pasteTicket": "Collez le ticket ici :",
-		"ticketPlaceholder": "ticket de réception sendme...",
+		"ticketPlaceholder": "ticket de réception smartTransfer...",
 		"howToReceive": "Comment recevoir des fichiers",
 		"instruction1": "L'expéditeur doit être en ligne et partager un fichier",
 		"instruction2": "Obtenez un ticket de l'expéditeur",

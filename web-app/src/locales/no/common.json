@@ -51,7 +51,7 @@
 		"saveToFolder": "Lagre i mappe:",
 		"noFolderSelected": "Ingen mappe valgt",
 		"pasteTicket": "Lim inn nøkkelen her:",
-		"ticketPlaceholder": "sendme overføringssnøkkel...",
+		"ticketPlaceholder": "smartTransfer overføringssnøkkel...",
 		"howToReceive": "Hvordan motta filer",
 		"instruction1": "Avsender må være pålogget og dele en fil",
 		"instruction2": "Få en nøkkel fra avsenderen",

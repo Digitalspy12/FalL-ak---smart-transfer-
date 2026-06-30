@@ -69,7 +69,7 @@
 		"noFolderSelected": "No folder selected",
 		"conflictsMore": "... and {{count}} more",
 		"pasteTicket": "Paste the ticket here:",
-		"ticketPlaceholder": "sendme receive ticket...",
+		"ticketPlaceholder": "smartTransfer receive ticket...",
 		"howToReceive": "How to receive files",
 		"instruction1": "Sender must be online and sharing a file",
 		"instruction2": "Get a ticket from the sender",

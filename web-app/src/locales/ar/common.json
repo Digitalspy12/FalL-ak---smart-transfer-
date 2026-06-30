@@ -51,7 +51,7 @@
 		"saveToFolder": "حفظ في المجلد:",
 		"noFolderSelected": "لم يتم اختيار مجلد",
 		"pasteTicket": "الصق التذكرة هنا:",
-		"ticketPlaceholder": "sendme تذكرة الاستقبال...",
+		"ticketPlaceholder": "smartTransfer تذكرة الاستقبال...",
 		"howToReceive": "كيفية استقبال الملفات",
 		"instruction1": "يجب أن يكون المرسل متصل بالإنترنت ويشارك ملفاً",
 		"instruction2": "احصل على تذكرة من المرسل",

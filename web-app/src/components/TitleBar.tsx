@@ -5,7 +5,7 @@ interface TitleBarProps {
 	title?: string
 }
 
-export const TitleBar = ({ title = 'ALT-SENDME' }: TitleBarProps) => {
+export const TitleBar = ({ title = 'Fall ak Smart Transfer' }: TitleBarProps) => {
 	const handleMinimize = async () => {
 		const window = await getCurrentWindow()
 		await window.minimize()

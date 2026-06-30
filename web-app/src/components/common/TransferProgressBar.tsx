@@ -89,6 +89,13 @@ function CircularRing({ percentage }: CircularRingProps) {
 						? ARC_ANGLE * partialFraction
 						: 0
 
+				let segmentColor = 'var(--app-primary)'
+				if (index < 10) {
+					segmentColor = '#ef4444' // red-500
+				} else if (index < 20) {
+					segmentColor = '#eab308' // yellow-500
+				}
+
 				return (
 					<g key={segmentKey}>
 						{/* Background (unfilled) arc */}
@@ -105,7 +112,7 @@ function CircularRing({ percentage }: CircularRingProps) {
 							<path
 								d={arcPath(segmentStartAngle, visibleSweep)}
 								fill="none"
-								stroke="var(--app-primary)"
+								stroke={segmentColor}
 								strokeWidth={STROKE_WIDTH}
 								strokeLinecap="round"
 								className="transition-all duration-300 ease-in-out"
@@ -176,6 +183,13 @@ export function TransferProgressBar({ progress }: TransferProgressBarProps) {
 							fillPercentage = 0
 						}
 
+						let segmentColor = 'var(--app-primary)'
+						if (index < 10) {
+							segmentColor = '#ef4444' // red-500
+						} else if (index < 20) {
+							segmentColor = '#eab308' // yellow-500
+						}
+
 						return (
 							<div
 								// biome-ignore lint/suspicious/noArrayIndexKey: The values are always static so it is okay
@@ -186,7 +200,7 @@ export function TransferProgressBar({ progress }: TransferProgressBarProps) {
 								<div
 									className="absolute bottom-0 left-0 right-0 rounded-sm transition-all duration-300 ease-in-out"
 									style={{
-										backgroundColor: 'var(--app-primary)',
+										backgroundColor: segmentColor,
 										height: `${fillPercentage}%`,
 									}}
 								/>

@@ -51,7 +51,7 @@
 		"saveToFolder": "Uložit do složky:",
 		"noFolderSelected": "Není vybrána žádná složka",
 		"pasteTicket": "Sem vložte ticket:",
-		"ticketPlaceholder": "sendme ticket pro příjem...",
+		"ticketPlaceholder": "smartTransfer ticket pro příjem...",
 		"howToReceive": "Jak přijmout soubory",
 		"instruction1": "Odesílatel musí být online a sdílet soubor",
 		"instruction2": "Získejte ticket od odesílatele",
