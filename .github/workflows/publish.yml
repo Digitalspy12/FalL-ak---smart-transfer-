@@ -179,7 +179,7 @@ jobs:
         with:
           projectPath: ./src-tauri
           tagName: ${{ github.ref_name }}
-          releaseName: 'AltSendme ${{ env.VERSION }}'
+          releaseName: 'Fall ak Smart Transfer ${{ env.VERSION }}'
           args: ${{ matrix.args }}
           releaseBody: ${{ steps.release_notes.outputs.notes }}
           releaseDraft: true
@@ -280,7 +280,7 @@ jobs:
             ls -la "src-tauri/gen/android/app/build/outputs/apk/universal/release/" 2>&1 || true
             exit 1
           fi
-          RENAME="AltSendme-${TAG}-universal.apk"
+          RENAME="Fall-ak-Smart-Transfer-${TAG}-universal.apk"
           cp "$APK" "$RENAME"
           echo "Uploading $RENAME to release $TAG"
           gh release upload "$TAG" "$RENAME" --clobber
