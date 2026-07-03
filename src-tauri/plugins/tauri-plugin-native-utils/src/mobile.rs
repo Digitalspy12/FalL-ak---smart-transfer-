@@ -56,3 +56,11 @@ impl<R: Runtime> NativeUtils<R> {
             .map_err(Into::into)
     }
 }
+
+impl<R: Runtime> NativeUtils<R> {
+    pub fn copy_to_saf(&self, args: CopyToSafArgs) -> crate::Result<()> {
+        self.0
+            .run_mobile_plugin("copy_to_saf", args)
+            .map_err(Into::into)
+    }
+}

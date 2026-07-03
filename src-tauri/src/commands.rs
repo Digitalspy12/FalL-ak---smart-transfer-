@@ -278,10 +278,41 @@ pub async fn receive_file(
     output_path: String,
     app_handle: tauri::AppHandle,
 ) -> Result<String, String> {
-    // Create receive options with user-specified output path
-    let output_dir = PathBuf::from(output_path);
+    #[cfg(target_os = "android")]
+    let output_dir = {
+        let cache_dir = app_handle
+            .path()
+            .app_cache_dir()
+            .map_err(|e| format!("Failed to get cache dir: {}", e))?;
+        
+        let unique_name = format!(
+            "recv_{}",
+            std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH)
+                .unwrap_or_default()
+                .as_millis()
+        );
+        let path = cache_dir.join("received_transfers").join(unique_name);
+        Some(path)
+    };
+
+    #[cfg(not(target_os = "android"))]
+    let output_dir = if output_path.trim().is_empty() {
+        tracing::info!("receive_file: no output path provided, will use downloads directory");
+        None
+    } else {
+        let p = PathBuf::from(&output_path);
+        if !p.is_absolute() {
+            tracing::warn!("receive_file: output path is not absolute: {:?}, will use downloads directory", output_path);
+            None
+        } else {
+            tracing::info!("receive_file: output path = {:?}", output_path);
+            Some(p)
+        }
+    };
+
     let options = ReceiveOptions {
-        output_dir: Some(output_dir),
+        output_dir,
         relay_mode: RelayModeOption::Default,
         magic_ipv4_addr: None,
         magic_ipv6_addr: None,
@@ -295,14 +326,20 @@ pub async fn receive_file(
 
     // Download using the core library
     match download(ticket, options, boxed_handle).await {
-        Ok(result) => Ok(result.message),
+        Ok(result) => {
+            #[cfg(target_os = "android")]
+            {
+                Ok(result.file_path.to_string_lossy().to_string())
+            }
+            #[cfg(not(target_os = "android"))]
+            Ok(result.message)
+        }
         Err(e) => {
             tracing::error!("Failed to receive file: {}", e);
             Err(format!("Failed to receive file: {}", e))
         }
     }
 }
-
 /// Get the current sharing status
 #[tauri::command]
 pub async fn get_sharing_status(state: State<'_, AppStateMutex>) -> Result<Option<String>, String> {

@@ -18,3 +18,10 @@ pub struct SelectItemArgs {
 pub struct AsyncJob {
     pub channel_id:  i64
 }
+
+#[derive(Debug, Clone, Deserialize, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct CopyToSafArgs {
+    pub source_path: String,
+    pub dest_uri: String,
+}

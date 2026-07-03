@@ -17,6 +17,7 @@ fun Uri.extractFolderOsPath(): String {
         when {
             "primary" == segments[0] && segments.size > 1 -> "${baseExternalPath}/${segments[1]}"
             "primary" == segments[0] -> baseExternalPath
+            segments.size > 1 && (segments[0] == "raw" || segments[1].startsWith("/")) -> segments[1]
             segments.size > 1 -> "/storage/${segments[0]}/${segments[1]}"
             else -> "/storage/${segments[0]}/"
         }

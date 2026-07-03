@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-copy-to-saf"
+description = "Enables the copy_to_saf command without any pre-configured scope."
+commands.allow = ["copy_to_saf"]
+
+[[permission]]
+identifier = "deny-copy-to-saf"
+description = "Denies the copy_to_saf command without any pre-configured scope."
+commands.deny = ["copy_to_saf"]

@@ -283,26 +283,48 @@ pub async fn download(
             dirs::download_dir().unwrap_or_else(|| std::env::current_dir().unwrap())
         });
 
-        let conflicts = export(&db, collection, &output_dir).await?;
+        // Validate the output directory is absolute so we don't write to a relative path
+        if !output_dir.is_absolute() {
+            tracing::error!("output_dir is not absolute: {:?}, falling back to downloads", output_dir);
+            let fallback = dirs::download_dir().unwrap_or_else(|| std::env::current_dir().unwrap());
+            tracing::info!("export: using fallback output_dir = {:?}", fallback);
+            let conflicts = export(&db, collection, &fallback).await?;
 
-        if !conflicts.is_empty() {
-            let payload = serde_json::to_string(&conflicts).unwrap_or_else(|_| "[]".to_string());
-            emit_event_with_payload(&app_handle, "receive-conflicts", &payload);
+            if !conflicts.is_empty() {
+                let payload = serde_json::to_string(&conflicts).unwrap_or_else(|_| "[]".to_string());
+                emit_event_with_payload(&app_handle, "receive-conflicts", &payload);
+            }
+
+            endpoint.close().await;
+            emit_event(&app_handle, "receive-completed");
+
+            anyhow::Ok((
+                total_files,
+                payload_size,
+                stats,
+                fallback,
+                conflicts.len(),
+            ))
+        } else {
+            tracing::info!("export: output_dir = {:?}", output_dir);
+            let conflicts = export(&db, collection, &output_dir).await?;
+
+            if !conflicts.is_empty() {
+                let payload = serde_json::to_string(&conflicts).unwrap_or_else(|_| "[]".to_string());
+                emit_event_with_payload(&app_handle, "receive-conflicts", &payload);
+            }
+
+            endpoint.close().await;
+            emit_event(&app_handle, "receive-completed");
+
+            anyhow::Ok((
+                total_files,
+                payload_size,
+                stats,
+                output_dir,
+                conflicts.len(),
+            ))
         }
-
-        // Explicit call endpoint.close() to gracefully shutdown the connection
-        endpoint.close().await;
-
-        // Emit completion event AFTER everything is done
-        emit_event(&app_handle, "receive-completed");
-
-        anyhow::Ok((
-            total_files,
-            payload_size,
-            stats,
-            output_dir,
-            conflicts.len(),
-        ))
     };
 
     let (total_files, payload_size, _stats, output_dir, conflict_count) = select! {
@@ -519,6 +541,7 @@ async fn export(
             })?;
         }
 
+        let target_path = target.clone(); // keep for error reporting
         let mut stream = db
             .export_with_opts(ExportOptions {
                 hash: *hash,
@@ -540,7 +563,14 @@ async fn export(
                     // Export completed
                 }
                 ExportProgressItem::Error(cause) => {
-                    anyhow::bail!("error exporting {}: {}", name, cause);
+                    tracing::error!(
+                        "Export failed: name={:?} target={:?} cause={:?}",
+                        name, target_path, cause
+                    );
+                    anyhow::bail!(
+                        "error exporting {} to {}: {:?}",
+                        name, target_path.display(), cause
+                    );
                 }
             }
         }

@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import java.io.File
 import java.io.IOException
+import android.webkit.MimeTypeMap
 
 const val BUFFER_SIZE = 1024 * 1024
 
@@ -177,4 +178,33 @@ private fun copyUriTreeWithProgress(
             targetFolder.absolutePath
         )
     )
+}
+
+fun copyFileToDocument(context: Context, sourceFile: File, destDoc: DocumentFile) {
+    context.contentResolver.openOutputStream(destDoc.uri)?.use { output ->
+        sourceFile.inputStream().use { input ->
+            input.copyTo(output)
+        }
+    } ?: throw IOException("Failed to open output stream for ${destDoc.uri}")
+}
+
+fun copyDirectoryToDocumentTree(context: Context, sourceDir: File, destTreeDir: DocumentFile) {
+    for (file in sourceDir.listFiles() ?: emptyArray()) {
+        if (file.isDirectory) {
+            val subDir = destTreeDir.findFile(file.name) ?: destTreeDir.createDirectory(file.name)
+            if (subDir != null) {
+                copyDirectoryToDocumentTree(context, file, subDir)
+            }
+        } else {
+            val extension = file.extension
+            val mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension) ?: "application/octet-stream"
+            val existingFile = destTreeDir.findFile(file.name)
+            existingFile?.delete()
+            
+            val newFile = destTreeDir.createFile(mimeType, file.name)
+            if (newFile != null) {
+                copyFileToDocument(context, file, newFile)
+            }
+        }
+    }
 }

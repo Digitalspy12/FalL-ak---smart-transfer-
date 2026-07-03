@@ -87,7 +87,9 @@
 		"downloadCompletedWithConflicts": "Download completed with name conflicts resolved",
 		"downloadedFile": "Downloaded File",
 		"stopReceiving": "Stop receiving",
-		"download": "Download"
+		"download": "Download",
+		"selectFolderRequiredTitle": "Download Folder Required",
+		"selectFolderRequiredDesc": "Please select a download folder before receiving files."
 	},
 	"transfer": {
 		"progress": "Transfer Progress",

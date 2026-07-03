@@ -21,6 +21,15 @@ import kotlinx.coroutines.launch
 import java.io.File
 import java.io.IOException
 import java.util.concurrent.ConcurrentHashMap
+import android.net.Uri
+import androidx.documentfile.provider.DocumentFile
+import android.webkit.MimeTypeMap
+
+@InvokeArg
+class CopyToSafArgs {
+    lateinit var sourcePath: String
+    lateinit var destUri: String
+}
 
 @InvokeArg
 class SelectorArgs {
@@ -149,6 +158,48 @@ class NativeUtils(private val activity: Activity) : Plugin(activity) {
         }
 
         jobs[channel.id] = job to tempFolder.absolutePath
+    }
+
+    @Command
+    fun copy_to_saf(invoke: Invoke) {
+        val args = invoke.parseArgs(CopyToSafArgs::class.java)
+        val sourcePath = args.sourcePath
+        val destUri = args.destUri
+
+        scope.launch {
+            try {
+                val sourceFile = File(sourcePath)
+                if (!sourceFile.exists()) {
+                    invoke.reject("Source path does not exist: $sourcePath")
+                    return@launch
+                }
+
+                val destTreeDir = DocumentFile.fromTreeUri(activity, Uri.parse(destUri))
+                    ?: throw IOException("Failed to resolve destination URI: $destUri")
+
+                if (sourceFile.isFile) {
+                    val extension = sourceFile.extension
+                    val mimeType = MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension) ?: "application/octet-stream"
+                    val existingFile = destTreeDir.findFile(sourceFile.name)
+                    existingFile?.delete()
+                    val newFile = destTreeDir.createFile(mimeType, sourceFile.name)
+                    if (newFile != null) {
+                        copyFileToDocument(activity, sourceFile, newFile)
+                    } else {
+                        throw IOException("Failed to create file in destination: ${sourceFile.name}")
+                    }
+                } else if (sourceFile.isDirectory) {
+                    copyDirectoryToDocumentTree(activity, sourceFile, destTreeDir)
+                }
+
+                // Clean up temporary cache path
+                sourceFile.deleteRecursively()
+
+                invoke.resolve()
+            } catch (e: Exception) {
+                invoke.reject(e.message)
+            }
+        }
     }
 
     override fun load(webView: WebView) {

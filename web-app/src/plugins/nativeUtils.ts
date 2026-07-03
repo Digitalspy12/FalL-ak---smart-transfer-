@@ -83,3 +83,16 @@ export async function selectSendFolder(
 	if (!response) return null
 	return new FileSelectedHandler(channel.id)
 }
+
+export async function copyToSaf(
+	sourcePath: string,
+	destUri: string
+): Promise<void> {
+	await invoke<void>('plugin:native-utils|copy_to_saf', {
+		args: {
+			sourcePath,
+			destUri,
+		},
+	})
+}
+

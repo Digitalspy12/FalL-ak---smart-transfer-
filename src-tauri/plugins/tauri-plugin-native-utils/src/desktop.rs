@@ -36,3 +36,9 @@ impl<R: Runtime> NativeUtils<R> {
         Err(crate::Error::UnsupportedPlafrormError)
     }
 }
+
+impl<R: Runtime> NativeUtils<R> {
+    pub fn copy_to_saf(&self, _: CopyToSafArgs) -> crate::Result<()> {
+        Err(crate::Error::UnsupportedPlafrormError)
+    }
+}

@@ -40,6 +40,7 @@ pub fn init<R: Runtime>() -> TauriPlugin<R> {
             commands::select_send_document,
             commands::select_send_folder,
             commands::cancel_job,
+            commands::copy_to_saf,
         ])
         .setup(|app, api| {
             #[cfg(mobile)]

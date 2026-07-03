@@ -35,3 +35,11 @@ pub(crate) async fn cancel_job<R: Runtime>(
 ) -> Result<()> {
     app.native_utils().cancel_job(job)
 }
+
+#[command]
+pub(crate) async fn copy_to_saf<R: Runtime>(
+    app: AppHandle<R>,
+    args: CopyToSafArgs,
+) -> Result<()> {
+    app.native_utils().copy_to_saf(args)
+}

@@ -3,7 +3,7 @@ import { listen, type UnlistenFn } from '@tauri-apps/api/event'
 import { downloadDir, join } from '@tauri-apps/api/path'
 import { open } from '@tauri-apps/plugin-dialog'
 import { revealItemInDir } from '@tauri-apps/plugin-opener'
-import { selectDownloadFolder } from '@/plugins/nativeUtils'
+import { selectDownloadFolder, copyToSaf } from '@/plugins/nativeUtils'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from '../i18n/react-i18next-compat'
 import { sendSystemNotification } from '../lib/systemNotification'
@@ -95,7 +95,9 @@ export function useReceiver(): UseReceiverReturn {
 	const [isCompleted, setIsCompleted] = useState(false)
 	const [savePath, setSavePath] = useState('')
 	const downloadsPath = useAppSettingStore((state) => state.downloadsPath)
+	const downloadsUri = useAppSettingStore((state) => state.downloadsUri)
 	const setDownloadsPath = useAppSettingStore((state) => state.setDownloadsPath)
+	const setDownloadsUri = useAppSettingStore((state) => state.setDownloadsUri)
 	const [transferMetadata, setTransferMetadata] =
 		useState<TransferMetadata | null>(null)
 	const [transferProgress, setTransferProgress] =
@@ -482,6 +484,7 @@ export function useReceiver(): UseReceiverReturn {
 				if (!response) return
 				selected = response.path
 				setDownloadsPath(selected)
+				setDownloadsUri(response.uri)
 			} else {
 				selected = await open({
 					multiple: false,
@@ -505,6 +508,15 @@ export function useReceiver(): UseReceiverReturn {
 	const handleReceive = async () => {
 		if (!ticket.trim()) return
 
+		if (IS_ANDROID && !downloadsUri) {
+			showAlert(
+				t('common:receiver.selectFolderRequiredTitle'),
+				t('common:receiver.selectFolderRequiredDesc'),
+				'info'
+			)
+			return
+		}
+
 		try {
 			transferItemCountRef.current = previewMetadata?.itemCount
 			previewRequestSeqRef.current += 1
@@ -519,10 +531,14 @@ export function useReceiver(): UseReceiverReturn {
 			pendingConflictNoticeRef.current = null
 			folderOpenTriggeredRef.current = false
 
-			await invoke<string>('receive_file', {
+			const tempPath = await invoke<string>('receive_file', {
 				ticket: ticket.trim(),
 				outputPath: savePath,
 			})
+
+			if (IS_ANDROID) {
+				await copyToSaf(tempPath, downloadsUri)
+			}
 		} catch (error) {
 			console.error('Failed to receive file:', error)
 			showAlert(t('common:errors.receiveFailed'), String(error), 'error')

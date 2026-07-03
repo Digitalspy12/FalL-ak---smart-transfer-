@@ -13,6 +13,7 @@ export type AppSettingsState = {
 	autoUpdate: boolean
 	showProgressOnIcon: boolean
 	downloadsPath: string
+	downloadsUri: string
 	windowsContextMenu: boolean
 }
 
@@ -24,6 +25,7 @@ export type AppSettingsActions = {
 	setAutoUpdate: (value: boolean) => void
 	toggleShowProgressOnIcon?: (value: boolean) => void
 	setDownloadsPath: (value: string) => void
+	setDownloadsUri: (value: string) => void
 	setWindowsContextMenu: (value: boolean) => void
 }
 
@@ -44,6 +46,7 @@ export const useAppSettingStore = create<AppSettings>()(
 			toggleShowProgressOnIcon: (value: boolean) =>
 				set({ showProgressOnIcon: value }),
 			setDownloadsPath: (value: string) => set({ downloadsPath: value }),
+			setDownloadsUri: (value: string) => set({ downloadsUri: value }),
 			setWindowsContextMenu: (value: boolean) =>
 				set({ windowsContextMenu: value }),
 		}),
