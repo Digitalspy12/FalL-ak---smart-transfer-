@@ -4,7 +4,7 @@ npm run tauri dev
 # TrackShift2025 SmartTransfer — Linux Installation Guide
 ### (Virtual Environment + Storage-Efficient Reinstall Strategy)
 
-> **Project:** `Fall_ak` / `alt-sendme` — Tauri v2 + Rust Core + React/Vite Frontend  
+> **Project:** `Fall_ak` — Tauri v2 + Rust Core + React/Vite Frontend  
 > **Stack:** Rust 1.81+, Node.js 18+, Tauri v2, React 18, Vite  
 > **Linux Deps:** WebKitGTK, GTK3, libsoup, JavaScriptCore
 
